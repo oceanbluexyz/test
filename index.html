@@ -1,0 +1,2581 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Xander Nexus – Verified Text Messaging &amp; Automated Sales for
+            Local Businesses
+        </title>
+
+        <!-- Open Graph (Facebook, iMessage, WhatsApp, Slack, LinkedIn) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.xandernexus.com/" />
+        <meta
+            property="og:title"
+            content="Xander Nexus – Verified Text Messaging &amp; Automated Sales"
+        />
+        <meta
+            property="og:description"
+            content="Skip the spam folder. Text customers with app-like features right inside their default inbox — verified, branded, and fully automated."
+        />
+        <meta
+            property="og:image"
+            content="https://www.xandernexus.com/og-preview.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Xander Nexus" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Xander Nexus – Verified Text Messaging &amp; Automated Sales"
+        />
+        <meta
+            name="twitter:description"
+            content="Skip the spam folder. Text customers with app-like features right inside their default inbox."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.xandernexus.com/og-preview.jpg"
+        />
+
+        <!-- General -->
+        <meta
+            name="description"
+            content="Xander Nexus provides carrier-verified text messaging, branded RCS, and automated sales tools for local businesses. Skip the spam folder and grow revenue."
+        />
+        <link rel="canonical" href="https://www.xandernexus.com/" />
+        <style>
+            :root {
+                --black: #2d2d2d;
+                --ink: #2d2d2d;
+                --orange: #0088ff; /* bright blue accent fill */
+                --accent-ink: #194f8a; /* deep blue for text/lines on white */
+                --orange-2: #0088ff; /* bright blue */
+                --rose: #194f8a; /* deep blue */
+                --pink: #93c5fd; /* light blue */
+                --yellow: #dbeafe; /* pale blue */
+                --grey: #f2f2f2;
+                --grey-line: #dededc;
+                --txt-grey: #6e6e6e;
+                --maxw: 1200px;
+                --font:
+                    "Helvetica Neue", Helvetica, "Segoe UI", Roboto, Arial,
+                    sans-serif;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: var(--font);
+                color: var(--ink);
+                background: #fff;
+                line-height: 1.4;
+                -webkit-font-smoothing: antialiased;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            img {
+                max-width: 100%;
+                display: block;
+            }
+            .wrap {
+                max-width: var(--maxw);
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            /* ---------- LOGO MARK ---------- */
+            .logo {
+                display: inline-flex;
+                align-items: center;
+                color: var(--ink);
+            }
+            .logo svg {
+                height: 30px;
+                width: auto;
+                display: block;
+                fill: currentColor;
+            }
+            .foot-logo {
+                color: #fff;
+            }
+
+            /* ---------- HEADER (static, always white, full width) ---------- */
+            header {
+                position: relative;
+                z-index: 260;
+                background: #fff;
+                box-shadow: 0 1px 0 var(--grey-line);
+                transition: background 0.3s ease;
+            }
+            header.mega-open {
+                background: #f4f7f8;
+            }
+            .topbar {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                height: 90px;
+                padding: 0 40px 16px 28px;
+            }
+            nav.main {
+                display: flex;
+                gap: 30px;
+                align-items: flex-end;
+            }
+            nav.main a {
+                color: var(--ink);
+                font-size: 17px;
+                font-weight: 500;
+                padding: 6px 0 0;
+                position: relative;
+                white-space: nowrap;
+            }
+            nav.main a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -16px;
+                height: 0;
+                width: 100%;
+                background: var(--ink);
+                transition: height 0.2s ease;
+            }
+            nav.main a:hover::after {
+                height: 3px;
+            }
+            .actions {
+                display: flex;
+                align-items: flex-end;
+                gap: 22px;
+            }
+            .actions button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--ink);
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                font-family: var(--font);
+            }
+            .actions svg {
+                width: 19px;
+                height: 19px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 2;
+            }
+            .actions .burger {
+                display: none;
+            }
+
+            /* ---------- ANIMATED BURGER ---------- */
+            .burger-lines {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                position: relative;
+            }
+            .bline {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: var(--ink);
+                position: absolute;
+                left: 0;
+                transition:
+                    transform 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+                    opacity 0.25s ease;
+            }
+            .bline-1 {
+                top: 6px;
+            }
+            .bline-2 {
+                top: 13px;
+            }
+            .bline-3 {
+                top: 20px;
+            }
+            .burger.is-open .bline-1 {
+                transform: translateY(7px) rotate(45deg);
+            }
+            .burger.is-open .bline-2 {
+                opacity: 0;
+            }
+            .burger.is-open .bline-3 {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+            /* ---------- MEGA MENU ---------- */
+            nav.main .nav-trigger {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: var(--font);
+                color: var(--ink);
+                font-size: 17px;
+                font-weight: 500;
+                padding: 6px 0 0;
+                position: relative;
+                white-space: nowrap;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+            nav.main .nav-trigger::before,
+            nav.main .nav-trigger::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -16px;
+                height: 0;
+                width: 100%;
+                transition: height 0.2s ease;
+            }
+            nav.main .nav-trigger::before {
+                background: var(--ink);
+                z-index: 1;
+            }
+            nav.main .nav-trigger::after {
+                background: #0088ff;
+                z-index: 0;
+            }
+            nav.main .nav-trigger:hover::before {
+                height: 3px;
+            }
+            nav.main .nav-trigger.active::after {
+                height: 3px;
+            }
+            nav.main .nav-trigger.active:hover::before {
+                height: 0;
+            }
+            .mega {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: #f4f7f8;
+                border-top: 1px solid var(--grey-line);
+                box-shadow: 0 26px 44px -22px rgba(0, 0, 0, 0.3);
+                z-index: 190;
+                visibility: hidden;
+                clip-path: inset(0 0 100% 0);
+                transition:
+                    clip-path 0.4s cubic-bezier(0.16, 0.84, 0.44, 1),
+                    visibility 0.4s;
+                max-height: calc(100vh - 130px);
+                overflow-y: auto;
+            }
+            .mega.open {
+                visibility: visible;
+                clip-path: inset(0 0 0 0);
+            }
+            .mega-inner {
+                position: relative;
+                padding: 34px 40px 46px 28px;
+            }
+            .mega-close {
+                position: absolute;
+                top: 22px;
+                right: 34px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--ink);
+                line-height: 0;
+            }
+            .mega-close svg {
+                width: 24px;
+                height: 24px;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+            }
+            .mega-panel {
+                display: none;
+                position: relative;
+                overflow: hidden;
+            }
+            .mega-panel.show {
+                display: block;
+            }
+            .mega-level {
+                display: none;
+                position: relative;
+            }
+            .mega-level.show {
+                display: block;
+                animation: megaLevelIn 0.35s ease both;
+            }
+            .mega-level.exiting {
+                display: block;
+                animation: megaLevelOut 0.4s ease both;
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            .mega-level.enter-forward {
+                animation-name: slideInRight;
+                animation-duration: 0.45s;
+            }
+            .mega-level.enter-back {
+                animation-name: slideInLeft;
+                animation-duration: 0.45s;
+            }
+            .mega-level.exit-forward {
+                animation-name: slideOutLeft;
+                animation-duration: 0.4s;
+            }
+            .mega-level.exit-back {
+                animation-name: slideOutRight;
+                animation-duration: 0.4s;
+            }
+            @keyframes megaLevelIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(120px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-120px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes slideOutLeft {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(-120px);
+                }
+            }
+            @keyframes slideOutRight {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(120px);
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .mega,
+                .mega-level.show {
+                    transition: none;
+                    animation: none;
+                }
+            }
+            .mega-back {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: var(--font);
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--txt-grey);
+                margin: 0 0 4px;
+                padding: 4px 0;
+            }
+            .mega-back svg {
+                width: 14px;
+                height: 14px;
+                flex: none;
+                stroke: currentColor;
+                stroke-width: 2.2;
+                fill: none;
+                transform: scaleY(1.5);
+            }
+            .mega-root {
+                padding-top: 26px;
+            }
+            .mega-title {
+                font-size: 26px;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+                margin: 0 0 22px;
+                padding-left: 16px;
+            }
+            .mega-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 4px 24px;
+            }
+            .mega-link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                width: 100%;
+                padding: 13px 16px;
+                border-radius: 3px;
+                color: var(--ink);
+                font-size: 16px;
+                font-weight: 500;
+                text-align: left;
+                cursor: pointer;
+                background: none;
+                border: none;
+                font-family: var(--font);
+                transition:
+                    background 0.15s,
+                    color 0.15s;
+            }
+            .mega-link:hover {
+                background: var(--orange);
+                color: #fff;
+            }
+            .mega-link .chev {
+                width: 16px;
+                height: 16px;
+                flex: none;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+                opacity: 0.65;
+            }
+            .mega-link.view {
+                font-weight: 700;
+                color: var(--accent-ink);
+            }
+            @media (max-width: 1200px) {
+                .mega-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            /* ---------- HERO ---------- */
+            .hero {
+                position: relative;
+                min-height: 68vh;
+                display: flex;
+                align-items: flex-start;
+                color: #fff;
+                overflow: hidden;
+                padding: 48px 0 56px;
+            }
+            .hero-bg {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                background:
+                    radial-gradient(
+                        115% 90% at 80% 16%,
+                        rgba(0, 136, 255, 0.3),
+                        transparent 55%
+                    ),
+                    radial-gradient(
+                        85% 80% at 95% 90%,
+                        rgba(25, 79, 138, 0.42),
+                        transparent 55%
+                    ),
+                    radial-gradient(
+                        55% 55% at 32% 42%,
+                        rgba(255, 255, 255, 0.07),
+                        transparent 60%
+                    ),
+                    linear-gradient(
+                        135deg,
+                        #12211e 0%,
+                        #0b1413 58%,
+                        #050f0d 100%
+                    );
+            }
+            .hero-bg::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                background: linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0.48) 42%,
+                    rgba(0, 0, 0, 0.12) 100%
+                );
+            }
+            .hero-video {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+            .hero-pause {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 4;
+                width: 48px;
+                height: 48px;
+                background: #fff;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                color: var(--ink);
+            }
+            .hero-pause svg {
+                width: 20px;
+                height: 20px;
+                fill: currentColor;
+            }
+            .hero-pause .ic-play {
+                display: none;
+            }
+            .hero-pause.paused .ic-pause {
+                display: none;
+            }
+            .hero-pause.paused .ic-play {
+                display: block;
+            }
+            .hero-tag {
+                position: absolute;
+                right: 18px;
+                bottom: 16px;
+                z-index: 2;
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                color: rgba(255, 255, 255, 0.42);
+                font-weight: 500;
+            }
+            .hero .wrap {
+                position: relative;
+                z-index: 2;
+                max-width: none;
+                margin: 0;
+                padding: 0 40px 0 28px;
+                pointer-events: none;
+            }
+            .hero .wrap > * {
+                pointer-events: auto;
+            }
+            .hero h1 {
+                font-family: Georgia, "Times New Roman", serif;
+                font-weight: 400;
+                color: #fff;
+                max-width: 760px;
+                margin: 0;
+            }
+            .hero h1 .ln {
+                display: block;
+                font-size: clamp(24px, 3.2vw, 38px);
+                line-height: 1.12;
+                letter-spacing: -0.2px;
+            }
+            .hero h1 .big {
+                display: block;
+                font-size: clamp(58px, 10vw, 120px);
+                line-height: 0.96;
+                letter-spacing: -2px;
+                color: #fff;
+                margin: 0.02em 0 0.05em;
+            }
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: var(--orange);
+                color: #fff;
+                font-weight: 600;
+                font-size: 16px;
+                padding: 15px 30px;
+                border-radius: 2px;
+                margin-top: 34px;
+                transition:
+                    background 0.2s,
+                    transform 0.2s;
+                border: none;
+                cursor: pointer;
+                font-family: var(--font);
+            }
+            .btn:hover {
+                background: #0070d6;
+                transform: translateX(3px);
+            }
+            .btn.ghost {
+                background: transparent;
+                border: 2px solid var(--ink);
+                color: var(--ink);
+            }
+            .btn.ghost:hover {
+                background: var(--ink);
+                color: #fff;
+                transform: translateX(3px);
+            }
+            .btn .arrow {
+                font-size: 18px;
+            }
+            .hero .btn {
+                background: transparent;
+                border: 2px solid #fff;
+                color: #fff;
+            }
+            .hero .btn:hover {
+                background: #fff;
+                color: var(--ink);
+            }
+
+            /* ---------- SECTION SHELL ---------- */
+            section {
+                padding: 90px 0;
+            }
+            .eyebrow {
+                color: var(--accent-ink);
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                margin-bottom: 18px;
+            }
+            h2.title {
+                font-size: clamp(28px, 4vw, 46px);
+                font-weight: 700;
+                letter-spacing: -1px;
+                line-height: 1.08;
+                max-width: 18ch;
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(28px);
+                transition:
+                    opacity 0.7s ease,
+                    transform 0.7s ease;
+            }
+            .reveal.in {
+                opacity: 1;
+                transform: none;
+            }
+
+            /* ---------- FEATURED CARDS ---------- */
+            .featured {
+                background: #fff;
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2px;
+                margin-top: 40px;
+                background: var(--grey-line);
+            }
+            .card {
+                background: #fff;
+                padding: 34px 30px 40px;
+                min-height: 280px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+                transition: background 0.25s;
+            }
+            .card .bar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 6px;
+                width: 64px;
+                background: var(--accent-ink);
+            }
+            .card:nth-child(2) .bar {
+                background: var(--rose);
+            }
+            .card:nth-child(3) .bar {
+                background: var(--orange-2);
+            }
+            .card h3 {
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+                margin-bottom: 14px;
+                line-height: 1.15;
+            }
+            .card p {
+                color: var(--txt-grey);
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .card .more {
+                color: var(--accent-ink);
+                font-weight: 600;
+                font-size: 15px;
+            }
+            .card:hover {
+                background: #fafafa;
+            }
+            .card:hover .more {
+                text-decoration: underline;
+            }
+
+            /* ---------- PWC ONE (dark band) ---------- */
+            .band {
+                background: var(--ink);
+                color: #fff;
+            }
+            .band .inner {
+                display: grid;
+                grid-template-columns: 1.1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+            .band h2 {
+                font-size: clamp(26px, 3.4vw, 40px);
+                font-weight: 700;
+                letter-spacing: -0.8px;
+                line-height: 1.1;
+                margin-bottom: 22px;
+            }
+            .band p {
+                font-size: 18px;
+                color: #cfcfcf;
+                margin-bottom: 30px;
+                max-width: 46ch;
+            }
+            .band .visual {
+                height: 300px;
+                border-radius: 4px;
+                background:
+                    radial-gradient(
+                        circle at 30% 30%,
+                        var(--orange) 0,
+                        transparent 55%
+                    ),
+                    radial-gradient(
+                        circle at 75% 70%,
+                        var(--rose) 0,
+                        transparent 55%
+                    ),
+                    #111;
+                position: relative;
+                overflow: hidden;
+            }
+            .band .visual span {
+                position: absolute;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                animation: pulse 6s ease-in-out infinite;
+            }
+            .band .visual .r1 {
+                width: 120px;
+                height: 120px;
+            }
+            .band .visual .r2 {
+                width: 220px;
+                height: 220px;
+                animation-delay: -2s;
+            }
+            .band .visual .r3 {
+                width: 330px;
+                height: 330px;
+                animation-delay: -4s;
+            }
+            @keyframes pulse {
+                0%,
+                100% {
+                    opacity: 0.3;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+                50% {
+                    opacity: 0.8;
+                    transform: translate(-50%, -50%) scale(1.06);
+                }
+            }
+
+            /* ---------- CASE STUDIES ---------- */
+            .cases .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .cases p.lead {
+                color: var(--txt-grey);
+                font-size: 18px;
+                max-width: 52ch;
+                margin-top: 16px;
+            }
+            .cases .libline a {
+                color: var(--accent-ink);
+                font-weight: 700;
+                font-size: 16px;
+            }
+            .cases .libline a:hover {
+                text-decoration: underline;
+            }
+            .tabs {
+                display: flex;
+                gap: 6px;
+                margin-top: 46px;
+                border-bottom: 1px solid var(--grey-line);
+                flex-wrap: wrap;
+            }
+            .tab {
+                background: none;
+                border: none;
+                font-family: var(--font);
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--txt-grey);
+                padding: 14px 20px;
+                cursor: pointer;
+                position: relative;
+                white-space: nowrap;
+            }
+            .tab.active {
+                color: var(--ink);
+            }
+            .tab.active::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                height: 3px;
+                background: var(--accent-ink);
+            }
+            .panel {
+                display: none;
+                margin-top: 44px;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+            .panel.active {
+                display: grid;
+            }
+            .panel .logo-chip {
+                font-size: 13px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: var(--accent-ink);
+                font-weight: 700;
+                margin-bottom: 14px;
+            }
+            .panel h3 {
+                font-size: 36px;
+                font-weight: 700;
+                letter-spacing: -0.8px;
+                margin-bottom: 18px;
+            }
+            .panel p {
+                font-size: 18px;
+                color: #444;
+                margin-bottom: 26px;
+            }
+            .panel .art {
+                height: 300px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 42px;
+                font-weight: 700;
+                letter-spacing: -1px;
+            }
+            .panel .art.a0 {
+                background: linear-gradient(135deg, var(--orange), var(--rose));
+            }
+            .panel .art.a1 {
+                background: linear-gradient(135deg, var(--rose), var(--pink));
+            }
+            .panel .art.a2 {
+                background: linear-gradient(
+                    135deg,
+                    var(--orange-2),
+                    var(--orange)
+                );
+            }
+
+            /* ---------- CAREERS CTA ---------- */
+            .careers {
+                background: var(--grey);
+            }
+            .careers .inner {
+                max-width: 760px;
+            }
+            .careers h2 {
+                font-size: clamp(30px, 4.4vw, 52px);
+                font-weight: 700;
+                letter-spacing: -1.2px;
+                line-height: 1.05;
+            }
+            .careers h3 {
+                font-size: 20px;
+                font-weight: 400;
+                color: #444;
+                margin: 22px 0 8px;
+                line-height: 1.5;
+            }
+
+            /* ---------- FOOTER ---------- */
+            footer {
+                background: #f3f2ef;
+                color: var(--ink);
+                padding: 40px 0 40px;
+                border-top: 1px solid var(--grey-line);
+            }
+            footer .wrap {
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                grid-template-areas: "links links" "logo copy" "legal legal";
+                column-gap: 44px;
+            }
+            .foot-links {
+                grid-area: links;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px 28px;
+                padding-bottom: 18px;
+                margin-bottom: 22px;
+                border-bottom: 1px solid var(--grey-line);
+            }
+            .foot-links a {
+                color: var(--ink);
+                font-weight: 400;
+                font-size: 17px;
+                letter-spacing: -0.2px;
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+            }
+            .foot-links a:hover {
+                color: var(--accent-ink);
+            }
+            .foot-links a .ext {
+                width: 14px;
+                height: 14px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 2;
+            }
+            .foot-logo {
+                grid-area: logo;
+                display: block;
+                color: var(--ink);
+                align-self: start;
+            }
+            .foot-logo svg {
+                height: 30px;
+            }
+            .foot-copy {
+                grid-area: copy;
+                align-self: start;
+                font-size: 14px;
+                line-height: 1.55;
+                color: #5b5b5b;
+            }
+            .foot-copy p {
+                max-width: 780px;
+            }
+            .foot-copy p + p {
+                margin-top: 6px;
+            }
+            .legal {
+                grid-area: legal;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 24px;
+                margin-top: 22px;
+            }
+            .legal a {
+                color: var(--ink);
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .legal a:hover {
+                color: var(--accent-ink);
+            }
+
+            /* ---------- MOBILE MENU (drill-down) ---------- */
+            .mobile-menu {
+                position: fixed;
+                inset: 0;
+                background: #fff;
+                z-index: 250;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                padding-top: 90px;
+            }
+            .mobile-menu.open {
+                transform: none;
+            }
+            .mm-top {
+                display: none;
+            }
+            .mm-logo {
+                display: none;
+            }
+            .mm-close {
+                display: none;
+            }
+            .mm-back {
+                display: none;
+            }
+            .mm-back svg {
+                width: 24px;
+                height: 24px;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            /* Header back button (hidden by default, shown when mobile menu is in sub) */
+            .header-back {
+                display: none;
+                align-items: center;
+                gap: 6px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: var(--font);
+                font-size: 19px;
+                font-weight: 400;
+                color: var(--ink);
+                padding: 0;
+                line-height: 1;
+            }
+            .header-back svg {
+                width: 22px;
+                height: 22px;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+                transform: scaleY(1.3);
+            }
+            .mm-body {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+            }
+            .mm-panel {
+                position: absolute;
+                inset: 0;
+                overflow-y: auto;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                -webkit-overflow-scrolling: touch;
+            }
+            .mm-sub {
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                padding: 8px 0 24px;
+            }
+            .mm-sub.active {
+                transform: translateX(0);
+            }
+            .mm-list {
+                display: flex;
+                flex-direction: column;
+                padding: 4px 0 0;
+            }
+            .mm-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: none;
+                border-bottom: 1px solid var(--grey-line);
+                font-family: var(--font);
+                color: var(--ink);
+                font-size: 19px;
+                font-weight: 400;
+                padding: 18px 20px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .mm-item:hover,
+            .mm-item:active {
+                background: #f3f2ef;
+            }
+            .mm-chev {
+                width: 20px;
+                height: 20px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 2;
+                color: #a0a0a0;
+                flex: none;
+            }
+            .mm-sub a {
+                display: block;
+                color: var(--ink);
+                font-size: 18px;
+                font-weight: 400;
+                padding: 13px 20px;
+                text-decoration: none;
+            }
+            .mm-sub a:hover,
+            .mm-sub a:active {
+                background: #f3f2ef;
+            }
+            .mm-subhead {
+                font-weight: 700;
+                text-decoration: underline;
+                font-size: 20px;
+                padding-top: 14px;
+                padding-bottom: 16px;
+            }
+            .mm-all {
+                color: var(--accent-ink);
+                font-weight: 600;
+            }
+
+            /* ---------- RESPONSIVE ---------- */
+            @media (max-width: 980px) {
+                nav.main {
+                    display: none;
+                }
+                .mega {
+                    display: none;
+                }
+                .burger-label {
+                    display: none;
+                }
+                .actions .burger {
+                    display: flex;
+                }
+                .band .inner,
+                .panel.active,
+                .cards {
+                    grid-template-columns: 1fr;
+                }
+                .band .visual {
+                    height: 220px;
+                }
+                .panel .art {
+                    order: -1;
+                    height: 220px;
+                }
+            }
+            @media (max-width: 560px) {
+                section {
+                    padding: 64px 0;
+                }
+            }
+
+            /* PwC-style stacked mobile hero: copy on white up top, media banner below */
+            @media (max-width: 700px) {
+                .topbar {
+                    height: 60px;
+                    padding: 0 16px 10px 16px;
+                }
+                .actions {
+                    gap: 18px;
+                }
+                .burger-lines {
+                    width: 34px;
+                    height: 34px;
+                }
+                .bline-1 {
+                    top: 7px;
+                }
+                .bline-2 {
+                    top: 16px;
+                }
+                .bline-3 {
+                    top: 25px;
+                }
+                .burger.is-open .bline-1 {
+                    transform: translateY(9px) rotate(45deg);
+                }
+                .burger.is-open .bline-3 {
+                    transform: translateY(-9px) rotate(-45deg);
+                }
+                .mobile-menu {
+                    padding-top: 60px;
+                }
+                .actions svg {
+                    width: 34px;
+                    height: 34px;
+                }
+                .logo svg {
+                    height: 22px;
+                }
+                .hero {
+                    flex-direction: column-reverse;
+                    align-items: stretch;
+                    min-height: 0;
+                    padding: 0;
+                    color: var(--ink);
+                    background: #fff;
+                }
+                .hero .wrap {
+                    max-width: none;
+                    padding: 24px 16px 32px;
+                }
+                .hero h1 {
+                    max-width: none;
+                    color: var(--ink);
+                }
+                .hero h1 .ln {
+                    color: var(--ink);
+                    font-size: 20px;
+                    line-height: 1.18;
+                    font-weight: 300;
+                }
+                .hero h1 .big {
+                    color: var(--ink);
+                    font-size: 46px;
+                }
+                .hero .btn {
+                    margin-top: 24px;
+                    background: var(--orange);
+                    border: none;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 16px;
+                    padding: 14px 24px;
+                    align-self: flex-start;
+                }
+                .hero .btn .arrow {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .hero-bg {
+                    position: relative;
+                    inset: auto;
+                    width: 100%;
+                    height: 42vh;
+                    min-height: 280px;
+                }
+                .hero-tag {
+                    color: rgba(255, 255, 255, 0.55);
+                }
+                footer .wrap {
+                    grid-template-columns: 1fr;
+                    grid-template-areas: "links" "logo" "copy" "legal";
+                    padding: 0 22px;
+                }
+                .foot-links {
+                    flex-direction: column;
+                    gap: 22px;
+                }
+                .foot-links a {
+                    font-size: 22px;
+                }
+                .foot-copy {
+                    margin-top: 22px;
+                }
+                .legal {
+                    flex-direction: column;
+                    gap: 18px;
+                    margin-top: 28px;
+                }
+                .legal a {
+                    font-size: 16px;
+                }
+            }
+
+            /* ---------- COOKIE NOTICE (full-width bottom bar) ---------- */
+            .cookie {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 240;
+                background: #f3f2ef;
+                box-shadow: 0 -2px 24px rgba(0, 0, 0, 0.13);
+                padding: 24px 0;
+            }
+            .cookie .ckwrap {
+                padding: 0 40px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+            .cookie .ck-text {
+                flex: 1;
+                min-width: 0;
+            }
+            .cookie h4 {
+                font-size: 21px;
+                font-weight: 700;
+                letter-spacing: -0.3px;
+                margin-bottom: 8px;
+            }
+            .cookie p {
+                font-size: 14px;
+                color: #444;
+                line-height: 1.55;
+                max-width: 96ch;
+            }
+            .cookie p a {
+                color: var(--ink);
+                font-weight: 700;
+                text-decoration: underline;
+            }
+            .cookie .ck-actions {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                flex: none;
+            }
+            .cookie .ck-btn {
+                background: #a3d4ff;
+                color: #0a2e5c;
+                border: none;
+                font-family: var(--font);
+                font-weight: 700;
+                font-size: 15px;
+                padding: 14px 28px;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background 0.2s;
+                white-space: nowrap;
+            }
+            .cookie .ck-btn:hover {
+                background: #7dc4ff;
+            }
+            .cookie .ck-x {
+                background: none;
+                border: none;
+                color: var(--ink);
+                font-size: 28px;
+                line-height: 1;
+                cursor: pointer;
+                padding: 2px 6px;
+                flex: none;
+            }
+            .cookie.hide {
+                display: none;
+            }
+            @media (max-width: 860px) {
+                .cookie .ckwrap {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 16px;
+                    padding: 50px 22px 4px;
+                    position: relative;
+                }
+                .cookie .ck-actions {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                .cookie .ck-btn {
+                    width: 100%;
+                }
+                .cookie .ck-x {
+                    position: absolute;
+                    top: 10px;
+                    right: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="header">
+            <div class="topbar">
+                <a
+                    href="#"
+                    class="logo"
+                    id="headerLogo"
+                    aria-label="Xander Nexus home"
+                >
+                    <svg
+                        viewBox="0 0 8500 2000"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-label="xander nexus"
+                    >
+                        <path
+                            id="xnLogoPath"
+                            d="m 6128.7883,1787.1259 c -57.8067,-5.4641 -108.3786,-25.7781 -150.5,-60.454 -22.6485,-18.645 -50.9172,-51.8512 -62.3616,-73.2538 -1.1396,-2.1312 1.2329,-4.2601 49.082,-44.0415 27.6538,-22.9912 50.8084,-42.1266 51.4548,-42.5233 0.7611,-0.4671 3.0081,2.3134 6.3775,7.8915 9.1131,15.0873 19.8082,28.5432 33.3144,41.9141 22.3761,22.152 43.5755,33.9989 71.8647,40.1604 11.9009,2.5921 42.0574,2.5827 53.2682,-0.017 38.7517,-8.9846 61.1306,-34.7579 59.1704,-68.1452 -0.6941,-11.8211 -3.5926,-20.721 -9.7436,-29.9175 -12.7249,-19.0253 -36.6421,-34.8192 -88.5274,-58.4594 -54.396,-24.7842 -82.7631,-41.0527 -110.8994,-63.6006 -39.9142,-31.9866 -64.0877,-69.6688 -72.4322,-112.9091 -5.0654,-26.248 -4.8963,-57.0839 0.4573,-83.3822 17.0906,-83.9552 84.0634,-142.7227 177.4749,-155.7311 6.325,-0.8808 19.375,-1.8657 29,-2.1886 74.9545,-2.5146 140.1544,23.2688 196.358,77.6501 8.1854,7.92 22.2437,23.376 27.4518,30.1813 1.0996,1.4369 -4.6648,7.0177 -45.9637,44.5 -25.9716,23.5714 -47.983,43.4075 -48.9143,44.0802 -1.4765,1.0666 -2.7636,-0.085 -10.0569,-9 -26.4514,-32.3322 -51.7409,-50.4186 -81.8011,-58.5022 -8.5395,-2.2964 -11.5185,-2.5824 -27.5738,-2.647 -15.956,-0.064 -18.9084,0.1895 -26,2.2353 -23.9873,6.9198 -38.7507,20.5786 -45.1188,41.7431 -2.6509,8.8104 -2.4771,24.8388 0.3681,33.9477 8.0612,25.8076 33.3901,46.1374 87.8038,70.4741 27.2769,12.1997 61.828,29.6107 77.4343,39.0208 60.6865,36.592 96.6942,78.5688 110.915,129.3015 10.3656,36.9797 8.9953,85.1351 -3.4916,122.7036 -10.0499,30.2365 -29.9566,60.9727 -52.7603,81.463 -33.7084,30.2886 -76.1674,48.914 -127.7714,56.0491 -13.5406,1.8723 -54.2405,2.7454 -67.8791,1.4562 z m -741,-4.0287 c -75.1472,-6.6296 -140.699,-40.6555 -185.6603,-96.3705 -26.6116,-32.9765 -46.4861,-76.2627 -55.3372,-120.5235 -6.7977,-33.9924 -6.4026,-19.0254 -6.7518,-255.7956 l -0.316,-214.25 h 73.5326 73.5327 v 203.75 c 0,134.7317 0.3602,207.6455 1.0567,215.25 3.5706,38.9849 16.564,69.7234 38.9579,92.1626 22.2607,22.3058 51.8836,33.8256 86.982,33.8256 36.7151,0 66.9977,-12.3636 90.2981,-36.8664 17.769,-18.686 28.969,-42.5077 34.8492,-74.1218 l 2.325,-12.5 0.2907,-210.75 0.2907,-210.75 h 73.5058 73.5058 l -0.316,214.25 c -0.3492,236.7702 0.046,221.8032 -6.7518,255.7956 -16.9491,84.7553 -68.4771,153.7631 -141.4975,189.4977 -28.3089,13.8537 -54.4301,21.7013 -86.5,25.9872 -14.0089,1.8721 -51.6433,2.6756 -66,1.4091 z m -2200.5687,-207.3329 -187.9313,-206.3932 -0.2524,200.3932 -0.2525,200.3933 h -68.9975 -68.9976 v -343 -343 l 38.25,0.067 38.25,0.067 187.5,206.0644 187.5,206.0644 0.2525,-200.1315 0.2524,-200.1313 h 69.4976 69.4975 v 343 343 h -38.3187 -38.3186 z M 513.78829,1773.9942 c -34.375,-0.4622 -83.65,-1.1771 -109.5,-1.5885 l -47,-0.7481 -0.3216,-2.266 c -0.177,-1.2463 0.5614,-3.7213 1.6408,-5.5 1.0793,-1.7787 39.7401,-64.434 85.9128,-139.234 46.1727,-74.8 104.343,-169.075 129.2673,-209.5 111.0677,-180.1419 212.2875,-344.2275 328.4843,-532.49996 24.1006,-39.05 61.4541,-99.575 83.0077,-134.5 21.55361,-34.925 43.67981,-71.15 49.16941,-80.5 25.9341,-44.1722 101.487,-171.38679 108.4432,-182.59467 4.2993,-6.92708 8.4777,-13.14307 9.2853,-13.81333 1.2249,-1.01664 2.0871,-0.25506 5.2015,4.59469 3.5251,5.4894 165.2437,275.10921 309.8415,516.57281 36.1505,60.36766 66.1516,109.49766 66.669,109.17786 0.8721,-0.5389 33.6055,-55.0399 53.1158,-88.4374 17.4504,-29.87136 110.6733,-184.96616 365.7513,-608.49995 39.7492,-66 77.7299,-129.09354 84.4015,-140.20786 l 12.1302,-20.20786 120.5,-0.0381 c 66.275,-0.0209 126.2027,0.25278 133.1727,0.60827 11.0624,0.56422 12.7327,0.87587 13.1451,2.45269 0.5638,2.15626 -6.9245,15.28953 -42.5566,74.63685 -14.4437,24.05671 -26.9711,45.09319 -27.8388,46.74774 -4.3649,8.32353 -136.9925,228.92747 -483.973,805.00822 -49.6907,82.5 -91.8092,152.9993 -93.5966,156.665 -3.6049,7.3931 -23.3539,41.1023 -85.1466,145.335 -46.9358,79.1718 -47.5048,80.0822 -48.9146,78.2746 -0.5467,-0.701 -63.6733,-105.8996 -140.2814,-233.7746 -76.608,-127.875 -161.5297,-269.625 -188.7148,-315 -27.1852,-45.37496 -50.0207,-83.10676 -50.7457,-83.84846 -1.7741,-1.815 -0.2357,-4.1739 -50.9212,78.084 -23.8126,38.64546 -55.809,90.51446 -71.1033,115.26446 -15.2943,24.75 -40.27901,65.25 -55.52161,90 -31.2246,50.7005 -67.8233,110.0255 -167.4934,271.5 -37.8529,61.325 -88.9315,144.125 -113.508,184 -24.5765,39.875 -49.4121,80.15 -55.1903,89.5 -5.7782,9.35 -11.5872,18.909 -12.9089,21.2423 l -2.403,4.2423 -24.5,-0.1538 c -13.475,-0.085 -52.625,-0.532 -87,-0.9942 z m 294.1357,0.4135 c -51.2934,-0.2626 -52.3539,-0.3078 -51.8561,-2.2111 0.2794,-1.0687 0.1016,-2.0786 -0.3952,-2.2442 -1.5881,-0.5294 28.4664,-50.8894 259.78071,-435.2948 73.1422,-121.55 134.259,-223.1834 135.8151,-225.8519 l 2.8293,-4.8519 3.4005,5.3519 c 15.0967,23.7601 130.5998,217.6165 130.6796,219.3281 0.059,1.2684 -36.0148,62.2113 -85.3034,144.1108 -46.9731,78.0522 -107.0463,178.0085 -133.4959,222.1252 l -48.0903,80.2122 -80.50001,-0.2031 c -44.275,-0.1117 -104.0639,-0.3237 -132.8643,-0.4712 z m 859.47781,-2.5001 c -1.7396,-2.732 -5.1038,-8.291 -41.6943,-68.8943 -19.7987,-32.7918 -28.6846,-48.3887 -28.5042,-50.0319 0.2907,-2.6484 1.4667,-4.627 50.4131,-84.8238 74.4646,-122.0073 82.7819,-135.2967 84.3495,-134.7741 1.8211,0.607 40.232,63.8915 141.2836,232.7741 53.0781,88.7068 60.6863,101.7394 60.9856,104.4662 0.2069,1.8841 -0.3258,2.4596 -2.7198,2.9384 -1.6373,0.3275 -61.4104,0.5954 -132.8289,0.5954 h -129.852 z m 253.8909,-215 c -76.7341,-128.294 -130.0815,-218.4784 -130.2859,-220.25 -0.2885,-2.5 10.8134,-21.2445 66.6094,-112.4639 36.8256,-60.2052 67.3425,-109.5929 67.8153,-109.7505 0.9589,-0.3196 -1.4345,-4.2775 113.8197,188.2144 237.2891,396.3083 277.5371,464.1656 277.5371,467.9211 v 2.2517 l -53.25,0.6626 c -29.2875,0.3644 -89.0376,0.663 -132.778,0.6636 h -79.5279 z m 1823.4956,-123.75 v -337 h 192.5 192.5 v 69 69 H 4010.2807 3890.773 l 0.2577,61.75 0.2576,61.75 86.75,0.2555 86.75,0.2555 v 68.489 68.489 l -86.75,0.2555 -86.75,0.2555 -0.2569,68.25 -0.257,68.25 h 122.007 122.0069 v 69 69 h -195 -195 z m 597.8003,333.756 c 1.084,-1.7908 44.1192,-76.4885 95.6338,-165.9948 l 93.6629,-162.7388 -87.1554,-163.7612 c -47.9354,-90.0687 -88.9387,-167.0237 -91.1185,-171.0112 l -3.9632,-7.25 84.3201,0.035 84.32,0.035 56.8649,110.9652 c 31.2757,61.0309 57.1507,110.9575 57.5,110.948 0.3493,-0.01 26.9423,-49.9594 59.0956,-111 l 58.4606,-110.9832 h 79.8964 c 63.5086,0 79.7972,0.2564 79.4126,1.25 -0.2661,0.6875 -41.7143,74.2856 -92.107,163.5514 -50.3927,89.2657 -91.6231,162.6952 -91.6231,163.1766 0,0.4813 42.1092,77.9107 93.5761,172.0651 51.4669,94.1545 93.815,171.8125 94.107,172.5734 0.4494,1.1712 -12.3454,1.3835 -83.3822,1.3835 h -83.9131 l -60.4439,-113.4735 c -33.2441,-62.4104 -60.807,-113.3643 -61.2507,-113.231 -0.4437,0.1333 -28.3567,51.0838 -62.0289,113.2234 l -61.2221,112.9811 -80.3063,0.256 -80.3064,0.2559 z m 375.631,-1042.14926 -187.9313,-206.39323 -0.2524,200.39323 -0.2525,200.3933 h -68.9975 -68.9976 v -342.99999 -343 l 38.25,0.0671 38.25,0.0671 187.5,206.06438 187.5,206.06441 0.2525,-200.13151 0.2524,-200.13148 h 69.4976 69.4975 v 343 342.99999 h -38.3187 -38.3186 z m -1916.631,191.1493 c 1.084,-1.7908 44.1192,-76.4884 95.6338,-165.9948 l 93.6629,-162.73877 -87.1554,-163.76121 c -47.9354,-90.06867 -88.9387,-167.02371 -91.1185,-171.01121 l -3.9632,-7.25 84.3201,0.0348 84.32,0.0348 56.8649,110.96519 c 31.2757,61.03085 57.1507,110.95746 57.5,110.94802 0.3493,-0.009 26.9423,-49.95943 59.0956,-111 l 58.4606,-110.98281 h 79.8964 c 63.5086,0 79.7972,0.25639 79.4126,1.25 -0.2661,0.6875 -41.7143,74.28562 -92.107,163.55137 -50.3927,89.26575 -91.6231,162.69522 -91.6231,163.17659 0,0.48138 42.1092,77.91073 93.5761,172.06523 51.4669,94.1544 93.815,171.8125 94.107,172.5734 0.4494,1.1711 -12.3454,1.3834 -83.3822,1.3834 h -83.9131 l -60.4439,-113.4734 c -33.2441,-62.4104 -60.807,-113.3644 -61.2507,-113.2311 -0.4437,0.1333 -28.3567,51.0839 -62.0289,113.2234 l -61.2221,112.9811 -80.3063,0.256 -80.3064,0.256 z m 738.3643,2.3773 c 0.1845,-0.4835 59.9601,-154.8362 132.8346,-343.00614 l 132.4993,-342.12715 47.0007,0.0223 47.0008,0.0223 132,341.07935 c 72.6,187.59364 132.324,341.93634 132.72,342.98384 0.7047,1.8639 -0.9378,1.8991 -76.9874,1.6484 l -77.7074,-0.2562 -20.5126,-56.5 -20.5126,-56.5 -116.009,-0.2541 -116.009,-0.2542 -20.0766,56.7542 -20.0767,56.7541 -78.2497,0.2561 c -44.6905,0.1463 -78.1059,-0.1208 -77.9144,-0.6228 z m 382.6183,-240.3833 c -10.1249,-29.3615 -69.4347,-195.71294 -69.7829,-195.72624 -0.4952,-0.0189 -71,194.86724 -71,196.25504 0,0.3967 31.7731,0.7212 70.607,0.7212 56.0488,0 70.5181,-0.2577 70.1759,-1.25 z M 5274.7883,582.16037 V 245.07769 l 148.75,0.33116 c 160.8352,0.35806 154.855,0.17215 187.25,5.82104 77.3726,13.49185 150.1169,53.3725 198.3266,108.72866 47.6549,54.71913 74.5646,119.25568 80.7663,193.6991 2.2332,26.80751 0.2461,66.32419 -4.7018,93.49999 -12.1789,66.8913 -46.3652,130.6402 -94.7074,176.6056 -48.4097,46.0297 -111.1458,77.2264 -179.6837,89.3513 -31.1319,5.5075 -25.9171,5.3468 -186.75,5.7523 l -149.25,0.3762 z m 289.5,197.97517 c 101.441,-11.3351 171.5,-92.2106 171.5,-197.97789 0,-89.28322 -50.2153,-162.43341 -129.6495,-188.86452 -12.934,-4.30369 -27.8232,-7.54597 -41.8505,-9.1134 -5.138,-0.57412 -37.858,-1.00919 -76.25,-1.01388 l -67.25,-0.008 v 199 198.99999 l 67.25,-0.01 c 38.392,-0.01 71.112,-0.4397 76.25,-1.0139 z m 578.5,-197.97789 v -337 h 192.5 192.5 v 69 69 H 6408.2807 6288.773 l 0.2577,61.75 0.2576,61.75 86.75,0.25552 86.75,0.25553 v 68.48895 68.48899 l -86.75,0.2555 -86.75,0.2555 -0.2569,68.25 -0.257,68.25 h 122.007 122.0069 v 69 69 h -195 -195 z m 657,-0.0453 V 245.06699 l 119.25,0.37188 c 129.76,0.40466 126.8411,0.28622 154.6564,6.27539 63.595,13.69326 117.2055,49.50354 147.6787,98.64511 22.5163,36.31002 32.5087,75.06408 31.1223,120.70194 -0.5893,19.39571 -2.1176,30.96214 -6.24,47.22495 -13.3239,52.56236 -47.7604,98.54671 -93.6196,125.01358 -4.8663,2.8085 -8.8478,5.2525 -8.8478,5.4311 0,0.1785 35.325,60.8513 78.5,134.8282 43.175,73.977 78.5,134.75 78.5,135.0511 0,0.3011 -38.4106,0.5474 -85.3568,0.5474 h -85.3568 l -65.0804,-117.75 -65.0805,-117.75 -27.0627,-0.2661 -27.0628,-0.266 v 118.016 118.0161 h -73 -73 z m 229.5305,-31.31483 c 25.0625,-4.89764 44.4116,-15.30282 57.604,-30.97723 7.0304,-8.353 11.9503,-17.62361 15.4965,-29.19984 2.5074,-8.18497 2.7501,-10.39466 2.7968,-25.46277 0.059,-18.93472 -1.0302,-24.37478 -7.5322,-37.63069 -11.4262,-23.29506 -37.7815,-39.04602 -72.3956,-43.26635 -4.9609,-0.60485 -24.82,-1.09859 -44.25,-1.10014 l -35.25,-0.003 v 84.33333 c 0,46.38334 0.3375,84.6753 0.75,85.09325 0.4125,0.41796 17.4,0.54001 37.75,0.27124 27.8791,-0.36823 38.9796,-0.87554 45.0305,-2.05798 z M 1534.9357,900.87124 c -94.6272,-157.1887 -125.8702,-209.7382 -125.769,-211.5386 0.067,-1.1894 60.1966,-102.09983 133.6216,-224.2455 l 133.5,-222.08303 129.5,0.61862 c 71.225,0.34024 131.0911,0.86688 133.0357,1.17031 2.7712,0.4324 3.5419,1.01798 3.5642,2.70815 0.044,3.33277 -30.4972,54.51906 -271.5775,455.15645 -118.7328,197.3152 -126.7531,210.5201 -127.8293,210.4636 -0.3812,-0.02 -4.0017,-5.5325 -8.0457,-12.25 z m -765.94481,0.036 c -1.0782,-1.7875 -52.0299,-86.95 -113.2259,-189.25 C 594.56899,609.35725 529.55809,500.68225 511.29629,470.15725 439.81069,350.66737 387.59799,262.461 382.49239,252.56047 c -0.8784,-1.70323 -1.3626,-3.99318 -1.0761,-5.08878 0.5053,-1.932 1.6984,-2.01192 39.6103,-2.65322 21.4991,-0.36367 81.027,-0.66122 132.2843,-0.66122 h 93.195 l 103.3598,172.75 c 154.5468,258.30119 156.9226,262.33399 156.9226,266.37049 0,1.6964 -3.3729,7.2979 -69.7768,115.8795 -61.9807,101.349 -64.2496,105 -65.2524,105 -0.4442,0 -1.6899,-1.4625 -2.7682,-3.25 z m 184.8263,-332.99999 c -11.6571,-18.70712 -136.4106,-226.40742 -171.0328,-284.75 -10.6076,-17.875 -19.4303,-33.6767 -19.606,-35.11489 -0.3008,-2.46136 -0.013,-2.65166 4.8952,-3.2413 2.8681,-0.34454 62.4372,-0.63034 132.3758,-0.63512 l 127.16111,-0.009 2.4844,2.95258 c 5.7767,6.86547 70.6934,114.82215 70.6934,117.56358 0,2.60554 -4.4804,10.12115 -63.1822,105.98415 -52.43751,85.63311 -71.00711,115.5 -71.81151,115.5 -0.3329,0 -5.7227,-8.2125 -11.9774,-18.25 z"
+                        />
+                    </svg>
+                </a>
+                <button class="header-back" id="headerBack" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <polyline points="15 6 9 12 15 18" />
+                    </svg>
+                    Menu
+                </button>
+                <nav class="main">
+                    <button
+                        class="nav-trigger"
+                        data-menu="stories"
+                        aria-expanded="false"
+                    >
+                        Success stories
+                    </button>
+                    <button
+                        class="nav-trigger"
+                        data-menu="how"
+                        aria-expanded="false"
+                    >
+                        How it works
+                    </button>
+                    <button
+                        class="nav-trigger"
+                        data-menu="who"
+                        aria-expanded="false"
+                    >
+                        Who we help
+                    </button>
+                    <button
+                        class="nav-trigger"
+                        data-menu="features"
+                        aria-expanded="false"
+                    >
+                        Features
+                    </button>
+                    <button
+                        class="nav-trigger"
+                        data-menu="about"
+                        aria-expanded="false"
+                    >
+                        About Nexus
+                    </button>
+                    <a href="#careers">Partner with us</a>
+                </nav>
+                <div class="actions">
+                    <button class="burger" id="menuOpen" aria-label="Open menu">
+                        <span class="burger-lines">
+                            <span class="bline bline-1"></span>
+                            <span class="bline bline-2"></span>
+                            <span class="bline bline-3"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MEGA MENU -->
+            <div class="mega" id="mega" data-current="">
+                <div class="mega-inner">
+                    <button
+                        class="mega-close"
+                        id="megaClose"
+                        aria-label="Close menu"
+                    >
+                        <svg viewBox="0 0 24 24">
+                            <line x1="5" y1="5" x2="19" y2="19" />
+                            <line x1="19" y1="5" x2="5" y2="19" />
+                        </svg>
+                    </button>
+
+                    <!-- Success stories -->
+                    <div class="mega-panel" data-menu="stories">
+                        <div class="mega-level mega-root show">
+                            <div class="mega-title">Success stories</div>
+                            <div class="mega-grid">
+                                <button
+                                    class="mega-link has-sub"
+                                    data-sub="stories-ind"
+                                >
+                                    By industry
+                                    <svg class="chev" viewBox="0 0 24 24">
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                                <a class="mega-link" href="#featured"
+                                    >Customer spotlights</a
+                                >
+                                <a class="mega-link" href="#cases"
+                                    >ROI &amp; outcomes</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Video testimonials</a
+                                >
+                                <a class="mega-link" href="#cases"
+                                    >Featured: Rush Dental</a
+                                >
+                                <a class="mega-link" href="#featured"
+                                    >What&rsquo;s new</a
+                                >
+                                <a class="mega-link view" href="#cases"
+                                    >View all stories <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="mega-level" data-sub="stories-ind">
+                            <button class="mega-back">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="15 6 9 12 15 18" />
+                                </svg>
+                                Success stories
+                            </button>
+                            <div class="mega-title">By industry</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#"
+                                    >Dental &amp; orthodontics</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Salons &amp; spas</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Restaurants &amp; caf&eacute;s</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Retail &amp; boutiques</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Auto &amp; repair</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Home &amp; trades</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Medical &amp; wellness</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Fitness studios</a
+                                >
+                                <a class="mega-link view" href="#"
+                                    >View all industries <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How it works -->
+                    <div class="mega-panel" data-menu="how">
+                        <div class="mega-level mega-root show">
+                            <div class="mega-title">How it works</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#"
+                                    >Verified sender setup</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Branded RCS messaging</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Two-way conversations</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Automations &amp; reminders</a
+                                >
+                                <a class="mega-link" href="#">Integrations</a>
+                                <a class="mega-link" href="#"
+                                    >Numbers &amp; compliance</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Onboarding in a day</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Security &amp; privacy</a
+                                >
+                                <a class="mega-link view" href="#one"
+                                    >See a live demo <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Who we help -->
+                    <div class="mega-panel" data-menu="who">
+                        <div class="mega-level mega-root show">
+                            <div class="mega-title">Who we help</div>
+                            <div class="mega-grid">
+                                <button
+                                    class="mega-link has-sub"
+                                    data-sub="who-type"
+                                >
+                                    By business type
+                                    <svg class="chev" viewBox="0 0 24 24">
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="mega-link has-sub"
+                                    data-sub="who-use"
+                                >
+                                    By use case
+                                    <svg class="chev" viewBox="0 0 24 24">
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                                <a class="mega-link" href="#"
+                                    >Solo &amp; owner-operated</a
+                                >
+                                <a class="mega-link" href="#">Small teams</a>
+                                <a class="mega-link" href="#">Multi-location</a>
+                                <a class="mega-link" href="#"
+                                    >Franchises &amp; groups</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Agencies &amp; resellers</a
+                                >
+                                <a class="mega-link view" href="#cases"
+                                    >Find your fit <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="mega-level" data-sub="who-type">
+                            <button class="mega-back">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="15 6 9 12 15 18" />
+                                </svg>
+                                Who we help
+                            </button>
+                            <div class="mega-title">By business type</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#"
+                                    >Dental &amp; medical</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Salons &amp; spas</a
+                                >
+                                <a class="mega-link" href="#">Restaurants</a>
+                                <a class="mega-link" href="#"
+                                    >Retail &amp; boutiques</a
+                                >
+                                <a class="mega-link" href="#">Auto services</a>
+                                <a class="mega-link" href="#"
+                                    >Home &amp; trades</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Fitness &amp; wellness</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Professional services</a
+                                >
+                                <a class="mega-link view" href="#"
+                                    >View all <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="mega-level" data-sub="who-use">
+                            <button class="mega-back">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="15 6 9 12 15 18" />
+                                </svg>
+                                Who we help
+                            </button>
+                            <div class="mega-title">By use case</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#"
+                                    >Appointment reminders</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Promotions &amp; offers</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Order &amp; delivery updates</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Reviews &amp; referrals</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Support &amp; FAQs</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Win-back &amp; reactivation</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="mega-panel" data-menu="features">
+                        <div class="mega-level mega-root show">
+                            <div class="mega-title">Features</div>
+                            <div class="mega-grid">
+                                <button
+                                    class="mega-link has-sub"
+                                    data-sub="feat-msg"
+                                >
+                                    Messaging
+                                    <svg class="chev" viewBox="0 0 24 24">
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="mega-link has-sub"
+                                    data-sub="feat-auto"
+                                >
+                                    Automation
+                                    <svg class="chev" viewBox="0 0 24 24">
+                                        <polyline points="9 6 15 12 9 18" />
+                                    </svg>
+                                </button>
+                                <a class="mega-link" href="#">Team inbox</a>
+                                <a class="mega-link" href="#"
+                                    >Analytics &amp; reporting</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Templates &amp; snippets</a
+                                >
+                                <a class="mega-link" href="#">Integrations</a>
+                                <a class="mega-link" href="#"
+                                    >Compliance tools</a
+                                >
+                                <a class="mega-link view" href="#"
+                                    >View all features <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="mega-level" data-sub="feat-msg">
+                            <button class="mega-back">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="15 6 9 12 15 18" />
+                                </svg>
+                                Features
+                            </button>
+                            <div class="mega-title">Messaging</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#">Branded RCS</a>
+                                <a class="mega-link" href="#"
+                                    >Verified sender ID</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >MMS &amp; media</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Group messaging</a
+                                >
+                                <a class="mega-link" href="#">Two-way chat</a>
+                                <a class="mega-link" href="#">Short links</a>
+                                <a class="mega-link" href="#"
+                                    >Scheduled sends</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Delivery receipts</a
+                                >
+                                <a class="mega-link view" href="#"
+                                    >View all features <span>&rarr;</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="mega-level" data-sub="feat-auto">
+                            <button class="mega-back">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="15 6 9 12 15 18" />
+                                </svg>
+                                Features
+                            </button>
+                            <div class="mega-title">Automation</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#"
+                                    >Appointment reminders</a
+                                >
+                                <a class="mega-link" href="#">Drip campaigns</a>
+                                <a class="mega-link" href="#">Auto-replies</a>
+                                <a class="mega-link" href="#"
+                                    >Keywords &amp; opt-ins</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Triggers &amp; workflows</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Recurring broadcasts</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Smart send times</a
+                                >
+                                <a class="mega-link" href="#"
+                                    >Review requests</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Nexus -->
+                    <div class="mega-panel" data-menu="about">
+                        <div class="mega-level mega-root show">
+                            <div class="mega-title">About Nexus</div>
+                            <div class="mega-grid">
+                                <a class="mega-link" href="#footer"
+                                    >Our story</a
+                                >
+                                <a class="mega-link" href="#careers">Careers</a>
+                                <a class="mega-link" href="#">Newsroom</a>
+                                <a class="mega-link" href="#"
+                                    >Trust &amp; security</a
+                                >
+                                <a class="mega-link" href="privacy.html"
+                                    >Privacy statement</a
+                                >
+                                <a class="mega-link" href="#footer"
+                                    >Contact us</a
+                                >
+                                <a class="mega-link" href="#careers"
+                                    >Partners</a
+                                >
+                                <a class="mega-link" href="#">System status</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mm-top">
+                <a href="#" class="logo mm-logo" aria-label="Xander Nexus home">
+                    <svg
+                        viewBox="0 0 8500 2000"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-label="xander nexus"
+                    >
+                        <use href="#xnLogoPath" />
+                    </svg>
+                </a>
+                <button
+                    class="mm-back"
+                    id="mmBack"
+                    type="button"
+                    aria-label="Back to menu"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <polyline points="15 6 9 12 15 18" />
+                    </svg>
+                    Menu
+                </button>
+                <button class="mm-close" id="menuClose" aria-label="Close menu">
+                    <span class="bline bline-1"></span>
+                    <span class="bline bline-2"></span>
+                    <span class="bline bline-3"></span>
+                </button>
+            </div>
+            <div class="mm-body">
+                <nav class="mm-panel mm-root">
+                    <div class="mm-list">
+                        <button
+                            class="mm-item"
+                            type="button"
+                            data-sub="stories"
+                        >
+                            Success stories
+                            <svg
+                                class="mm-chev"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                        <button class="mm-item" type="button" data-sub="how">
+                            How it works
+                            <svg
+                                class="mm-chev"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                        <button class="mm-item" type="button" data-sub="who">
+                            Who we help
+                            <svg
+                                class="mm-chev"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                        <button
+                            class="mm-item"
+                            type="button"
+                            data-sub="features"
+                        >
+                            Features
+                            <svg
+                                class="mm-chev"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                        <button class="mm-item" type="button" data-sub="about">
+                            About Nexus
+                            <svg
+                                class="mm-chev"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                        <a class="mm-item" href="#careers">Partner with us</a>
+                    </div>
+                </nav>
+
+                <nav class="mm-panel mm-sub" data-panel="stories">
+                    <a class="mm-subhead" href="#featured">Success stories</a>
+                    <a href="#featured">By industry</a>
+                    <a href="#featured">Customer spotlights</a>
+                    <a href="#cases">ROI &amp; outcomes</a>
+                    <a href="#">Video testimonials</a>
+                    <a href="#cases">Featured: Rush Dental</a>
+                    <a href="#featured">What&rsquo;s new</a>
+                    <a class="mm-all" href="#cases">View all stories</a>
+                </nav>
+
+                <nav class="mm-panel mm-sub" data-panel="how">
+                    <a class="mm-subhead" href="#one">How it works</a>
+                    <a href="#">Verified sender setup</a>
+                    <a href="#">Branded RCS messaging</a>
+                    <a href="#">Two-way conversations</a>
+                    <a href="#">Automations &amp; reminders</a>
+                    <a href="#">Integrations</a>
+                    <a href="#">Numbers &amp; compliance</a>
+                    <a href="#">Onboarding in a day</a>
+                    <a href="#">Security &amp; privacy</a>
+                    <a class="mm-all" href="#one">See a live demo</a>
+                </nav>
+
+                <nav class="mm-panel mm-sub" data-panel="who">
+                    <a class="mm-subhead" href="#cases">Who we help</a>
+                    <a href="#">By business type</a>
+                    <a href="#">By use case</a>
+                    <a href="#">Solo &amp; owner-operated</a>
+                    <a href="#">Small teams</a>
+                    <a href="#">Multi-location</a>
+                    <a href="#">Franchises &amp; groups</a>
+                    <a href="#">Agencies &amp; resellers</a>
+                    <a class="mm-all" href="#cases">Find your fit</a>
+                </nav>
+
+                <nav class="mm-panel mm-sub" data-panel="features">
+                    <a class="mm-subhead" href="#one">Features</a>
+                    <a href="#">Messaging</a>
+                    <a href="#">Automation</a>
+                    <a href="#">Team inbox</a>
+                    <a href="#">Analytics &amp; reporting</a>
+                    <a href="#">Templates &amp; snippets</a>
+                    <a href="#">Integrations</a>
+                    <a href="#">Compliance tools</a>
+                    <a class="mm-all" href="#">View all features</a>
+                </nav>
+
+                <nav class="mm-panel mm-sub" data-panel="about">
+                    <a class="mm-subhead" href="#footer">About Nexus</a>
+                    <a href="#footer">Our story</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#">Newsroom</a>
+                    <a href="#">Trust &amp; security</a>
+                    <a href="privacy.html">Privacy statement</a>
+                    <a href="#footer">Contact us</a>
+                    <a href="#careers">Partners</a>
+                    <a href="#">System status</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-bg">
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    aria-hidden="true"
+                >
+                    <source
+                        src="https://github.com/oceanbluexyz/test/raw/ff265c80254cfe2d971463153960f2138da35e5d/xander-hero.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+                <button
+                    class="hero-pause"
+                    id="heroPause"
+                    type="button"
+                    aria-label="Pause background video"
+                >
+                    <svg
+                        class="ic-pause"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <rect x="6" y="5" width="4" height="14" rx="1" />
+                        <rect x="14" y="5" width="4" height="14" rx="1" />
+                    </svg>
+                    <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="7 5 19 12 7 19" />
+                    </svg>
+                </button>
+                <span class="hero-tag" aria-hidden="true"
+                    >Hero media placeholder — drop in a photo or video</span
+                >
+            </div>
+            <div class="wrap">
+                <h1>
+                    <span class="ln">We help you skip the spam folder.</span>
+                    <span class="big">So you can</span>
+                    <span class="ln"
+                        >text customers with app-like features right inside
+                        their default inbox.</span
+                    >
+                </h1>
+                <a href="#one" class="btn"
+                    >Learn more <span class="arrow">&rsaquo;</span></a
+                >
+            </div>
+        </section>
+
+        <!-- FEATURED -->
+        <section class="featured" id="featured">
+            <div class="wrap">
+                <div class="eyebrow reveal">What's New</div>
+                <h2 class="title reveal">
+                    Smarter ways to text, build trust, and make sales
+                </h2>
+                <div class="cards">
+                    <a class="card reveal" href="#">
+                        <span class="bar"></span>
+                        <h3>The modern text inbox</h3>
+                        <p>
+                            Official business verification is changing how
+                            customers text companies. Are you locking in your
+                            brand's checkmark?
+                        </p>
+                        <span class="more">Read the guide &rarr;</span>
+                    </a>
+                    <a class="card reveal" href="#">
+                        <span class="bar"></span>
+                        <h3>Nexus Marketing Hub</h3>
+                        <p>
+                            Send swipeable menus, product catalogs, and booking
+                            calendars without making customers download a thing.
+                        </p>
+                        <span class="more">Explore the features &rarr;</span>
+                    </a>
+                    <a class="card reveal" href="#">
+                        <span class="bar"></span>
+                        <h3>2026 Small Business Mobile Trends</h3>
+                        <p>
+                            How local shops are turning basic text reminders
+                            into automatic 24/7 storefronts.
+                        </p>
+                        <span class="more"
+                            >Download the free report &rarr;</span
+                        >
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PWC ONE -->
+        <section class="band" id="one">
+            <div class="wrap inner">
+                <div class="reveal">
+                    <div class="eyebrow">The Nexus Blueprint</div>
+                    <h2>
+                        An all-in-one texting system that works while you sleep
+                    </h2>
+                    <p>
+                        Xander Nexus brings your business name, your logo, and
+                        smart automated texting together into one simple
+                        experience—taking your customers from a simple text
+                        question to a confirmed sale in seconds.
+                    </p>
+                    <a href="#" class="btn"
+                        >How it works <span class="arrow">&rarr;</span></a
+                    >
+                </div>
+                <div class="visual reveal">
+                    <span class="r1"></span><span class="r2"></span
+                    ><span class="r3"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDIES -->
+        <section class="cases" id="cases">
+            <div class="wrap">
+                <div class="head">
+                    <div class="reveal">
+                        <div class="eyebrow">
+                            Real results from real businesses
+                        </div>
+                        <h2 class="title">Less manual work, more revenue</h2>
+                        <p class="lead">
+                            Good marketing isn't just about sending texts—it's
+                            about saving time and making an impact. See how
+                            we've helped local businesses grow faster.
+                        </p>
+                    </div>
+                    <div class="libline reveal">
+                        <a href="#">Explore all success stories &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="tabs" role="tablist">
+                    <button class="tab active" data-tab="0">
+                        Local Services
+                    </button>
+                    <button class="tab" data-tab="1">Retail Shops</button>
+                    <button class="tab" data-tab="2">Restaurants</button>
+                </div>
+
+                <div class="panel active" data-panel="0">
+                    <div>
+                        <div class="logo-chip">Rush Dental Clinic</div>
+                        <h3>Rush Dental Clinic</h3>
+                        <p>
+                            Learn how Rush Dental uses automated texting
+                            calendars to cut front-desk phone calls by 15%, let
+                            patients reschedule instantly, and make appointment
+                            booking completely hands-free.
+                        </p>
+                        <a href="#" class="btn ghost"
+                            >Read their story
+                            <span class="arrow">&rarr;</span></a
+                        >
+                    </div>
+                    <div class="art a0">HEALTH &amp; WELLNESS</div>
+                </div>
+
+                <div class="panel" data-panel="1">
+                    <div>
+                        <div class="logo-chip">Trimble Boutique</div>
+                        <h3>Trimble Boutique</h3>
+                        <p>
+                            Trimble completely changed how they sell online. See
+                            how Xander Nexus helped them text beautiful,
+                            swipeable lookbooks and automatically rescue
+                            abandoned shopping carts via text.
+                        </p>
+                        <a href="#" class="btn ghost"
+                            >Read their story
+                            <span class="arrow">&rarr;</span></a
+                        >
+                    </div>
+                    <div class="art a1">BOUTIQUE RETAIL</div>
+                </div>
+
+                <div class="panel" data-panel="2">
+                    <div>
+                        <div class="logo-chip">Leo's Pizza</div>
+                        <h3>Leo's Pizza</h3>
+                        <p>
+                            Leo's Pizza built a smart, self-service text menu
+                            that lets customers order, pay, and track their
+                            delivery driver on a live map—all without paying
+                            massive third-party app commissions.
+                        </p>
+                        <a href="#" class="btn ghost"
+                            >Read their story
+                            <span class="arrow">&rarr;</span></a
+                        >
+                    </div>
+                    <div class="art a2">RESTAURANTS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREERS -->
+        <section class="careers" id="careers">
+            <div class="wrap inner">
+                <div class="eyebrow reveal">Work With Us</div>
+                <h2 class="reveal">
+                    Upgrade your business texting. Keep your margins.
+                </h2>
+                <h3 class="reveal">
+                    At Xander Nexus, your business goals come first. We give you
+                    the automated tools, official verification, and support to
+                    grow your revenue while cutting down on manual front-desk
+                    labor.
+                </h3>
+                <div class="reveal">
+                    <a href="#" class="btn"
+                        >Get started today <span class="arrow">&rarr;</span></a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="wrap">
+                <a
+                    href="#"
+                    class="logo foot-logo"
+                    aria-label="Xander Nexus home"
+                >
+                    <svg
+                        viewBox="0 0 8500 2000"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-label="xander nexus"
+                    >
+                        <path
+                            d="m 6128.7883,1787.1259 c -57.8067,-5.4641 -108.3786,-25.7781 -150.5,-60.454 -22.6485,-18.645 -50.9172,-51.8512 -62.3616,-73.2538 -1.1396,-2.1312 1.2329,-4.2601 49.082,-44.0415 27.6538,-22.9912 50.8084,-42.1266 51.4548,-42.5233 0.7611,-0.4671 3.0081,2.3134 6.3775,7.8915 9.1131,15.0873 19.8082,28.5432 33.3144,41.9141 22.3761,22.152 43.5755,33.9989 71.8647,40.1604 11.9009,2.5921 42.0574,2.5827 53.2682,-0.017 38.7517,-8.9846 61.1306,-34.7579 59.1704,-68.1452 -0.6941,-11.8211 -3.5926,-20.721 -9.7436,-29.9175 -12.7249,-19.0253 -36.6421,-34.8192 -88.5274,-58.4594 -54.396,-24.7842 -82.7631,-41.0527 -110.8994,-63.6006 -39.9142,-31.9866 -64.0877,-69.6688 -72.4322,-112.9091 -5.0654,-26.248 -4.8963,-57.0839 0.4573,-83.3822 17.0906,-83.9552 84.0634,-142.7227 177.4749,-155.7311 6.325,-0.8808 19.375,-1.8657 29,-2.1886 74.9545,-2.5146 140.1544,23.2688 196.358,77.6501 8.1854,7.92 22.2437,23.376 27.4518,30.1813 1.0996,1.4369 -4.6648,7.0177 -45.9637,44.5 -25.9716,23.5714 -47.983,43.4075 -48.9143,44.0802 -1.4765,1.0666 -2.7636,-0.085 -10.0569,-9 -26.4514,-32.3322 -51.7409,-50.4186 -81.8011,-58.5022 -8.5395,-2.2964 -11.5185,-2.5824 -27.5738,-2.647 -15.956,-0.064 -18.9084,0.1895 -26,2.2353 -23.9873,6.9198 -38.7507,20.5786 -45.1188,41.7431 -2.6509,8.8104 -2.4771,24.8388 0.3681,33.9477 8.0612,25.8076 33.3901,46.1374 87.8038,70.4741 27.2769,12.1997 61.828,29.6107 77.4343,39.0208 60.6865,36.592 96.6942,78.5688 110.915,129.3015 10.3656,36.9797 8.9953,85.1351 -3.4916,122.7036 -10.0499,30.2365 -29.9566,60.9727 -52.7603,81.463 -33.7084,30.2886 -76.1674,48.914 -127.7714,56.0491 -13.5406,1.8723 -54.2405,2.7454 -67.8791,1.4562 z m -741,-4.0287 c -75.1472,-6.6296 -140.699,-40.6555 -185.6603,-96.3705 -26.6116,-32.9765 -46.4861,-76.2627 -55.3372,-120.5235 -6.7977,-33.9924 -6.4026,-19.0254 -6.7518,-255.7956 l -0.316,-214.25 h 73.5326 73.5327 v 203.75 c 0,134.7317 0.3602,207.6455 1.0567,215.25 3.5706,38.9849 16.564,69.7234 38.9579,92.1626 22.2607,22.3058 51.8836,33.8256 86.982,33.8256 36.7151,0 66.9977,-12.3636 90.2981,-36.8664 17.769,-18.686 28.969,-42.5077 34.8492,-74.1218 l 2.325,-12.5 0.2907,-210.75 0.2907,-210.75 h 73.5058 73.5058 l -0.316,214.25 c -0.3492,236.7702 0.046,221.8032 -6.7518,255.7956 -16.9491,84.7553 -68.4771,153.7631 -141.4975,189.4977 -28.3089,13.8537 -54.4301,21.7013 -86.5,25.9872 -14.0089,1.8721 -51.6433,2.6756 -66,1.4091 z m -2200.5687,-207.3329 -187.9313,-206.3932 -0.2524,200.3932 -0.2525,200.3933 h -68.9975 -68.9976 v -343 -343 l 38.25,0.067 38.25,0.067 187.5,206.0644 187.5,206.0644 0.2525,-200.1315 0.2524,-200.1313 h 69.4976 69.4975 v 343 343 h -38.3187 -38.3186 z M 513.78829,1773.9942 c -34.375,-0.4622 -83.65,-1.1771 -109.5,-1.5885 l -47,-0.7481 -0.3216,-2.266 c -0.177,-1.2463 0.5614,-3.7213 1.6408,-5.5 1.0793,-1.7787 39.7401,-64.434 85.9128,-139.234 46.1727,-74.8 104.343,-169.075 129.2673,-209.5 111.0677,-180.1419 212.2875,-344.2275 328.4843,-532.49996 24.1006,-39.05 61.4541,-99.575 83.0077,-134.5 21.55361,-34.925 43.67981,-71.15 49.16941,-80.5 25.9341,-44.1722 101.487,-171.38679 108.4432,-182.59467 4.2993,-6.92708 8.4777,-13.14307 9.2853,-13.81333 1.2249,-1.01664 2.0871,-0.25506 5.2015,4.59469 3.5251,5.4894 165.2437,275.10921 309.8415,516.57281 36.1505,60.36766 66.1516,109.49766 66.669,109.17786 0.8721,-0.5389 33.6055,-55.0399 53.1158,-88.4374 17.4504,-29.87136 110.6733,-184.96616 365.7513,-608.49995 39.7492,-66 77.7299,-129.09354 84.4015,-140.20786 l 12.1302,-20.20786 120.5,-0.0381 c 66.275,-0.0209 126.2027,0.25278 133.1727,0.60827 11.0624,0.56422 12.7327,0.87587 13.1451,2.45269 0.5638,2.15626 -6.9245,15.28953 -42.5566,74.63685 -14.4437,24.05671 -26.9711,45.09319 -27.8388,46.74774 -4.3649,8.32353 -136.9925,228.92747 -483.973,805.00822 -49.6907,82.5 -91.8092,152.9993 -93.5966,156.665 -3.6049,7.3931 -23.3539,41.1023 -85.1466,145.335 -46.9358,79.1718 -47.5048,80.0822 -48.9146,78.2746 -0.5467,-0.701 -63.6733,-105.8996 -140.2814,-233.7746 -76.608,-127.875 -161.5297,-269.625 -188.7148,-315 -27.1852,-45.37496 -50.0207,-83.10676 -50.7457,-83.84846 -1.7741,-1.815 -0.2357,-4.1739 -50.9212,78.084 -23.8126,38.64546 -55.809,90.51446 -71.1033,115.26446 -15.2943,24.75 -40.27901,65.25 -55.52161,90 -31.2246,50.7005 -67.8233,110.0255 -167.4934,271.5 -37.8529,61.325 -88.9315,144.125 -113.508,184 -24.5765,39.875 -49.4121,80.15 -55.1903,89.5 -5.7782,9.35 -11.5872,18.909 -12.9089,21.2423 l -2.403,4.2423 -24.5,-0.1538 c -13.475,-0.085 -52.625,-0.532 -87,-0.9942 z m 294.1357,0.4135 c -51.2934,-0.2626 -52.3539,-0.3078 -51.8561,-2.2111 0.2794,-1.0687 0.1016,-2.0786 -0.3952,-2.2442 -1.5881,-0.5294 28.4664,-50.8894 259.78071,-435.2948 73.1422,-121.55 134.259,-223.1834 135.8151,-225.8519 l 2.8293,-4.8519 3.4005,5.3519 c 15.0967,23.7601 130.5998,217.6165 130.6796,219.3281 0.059,1.2684 -36.0148,62.2113 -85.3034,144.1108 -46.9731,78.0522 -107.0463,178.0085 -133.4959,222.1252 l -48.0903,80.2122 -80.50001,-0.2031 c -44.275,-0.1117 -104.0639,-0.3237 -132.8643,-0.4712 z m 859.47781,-2.5001 c -1.7396,-2.732 -5.1038,-8.291 -41.6943,-68.8943 -19.7987,-32.7918 -28.6846,-48.3887 -28.5042,-50.0319 0.2907,-2.6484 1.4667,-4.627 50.4131,-84.8238 74.4646,-122.0073 82.7819,-135.2967 84.3495,-134.7741 1.8211,0.607 40.232,63.8915 141.2836,232.7741 53.0781,88.7068 60.6863,101.7394 60.9856,104.4662 0.2069,1.8841 -0.3258,2.4596 -2.7198,2.9384 -1.6373,0.3275 -61.4104,0.5954 -132.8289,0.5954 h -129.852 z m 253.8909,-215 c -76.7341,-128.294 -130.0815,-218.4784 -130.2859,-220.25 -0.2885,-2.5 10.8134,-21.2445 66.6094,-112.4639 36.8256,-60.2052 67.3425,-109.5929 67.8153,-109.7505 0.9589,-0.3196 -1.4345,-4.2775 113.8197,188.2144 237.2891,396.3083 277.5371,464.1656 277.5371,467.9211 v 2.2517 l -53.25,0.6626 c -29.2875,0.3644 -89.0376,0.663 -132.778,0.6636 h -79.5279 z m 1823.4956,-123.75 v -337 h 192.5 192.5 v 69 69 H 4010.2807 3890.773 l 0.2577,61.75 0.2576,61.75 86.75,0.2555 86.75,0.2555 v 68.489 68.489 l -86.75,0.2555 -86.75,0.2555 -0.2569,68.25 -0.257,68.25 h 122.007 122.0069 v 69 69 h -195 -195 z m 597.8003,333.756 c 1.084,-1.7908 44.1192,-76.4885 95.6338,-165.9948 l 93.6629,-162.7388 -87.1554,-163.7612 c -47.9354,-90.0687 -88.9387,-167.0237 -91.1185,-171.0112 l -3.9632,-7.25 84.3201,0.035 84.32,0.035 56.8649,110.9652 c 31.2757,61.0309 57.1507,110.9575 57.5,110.948 0.3493,-0.01 26.9423,-49.9594 59.0956,-111 l 58.4606,-110.9832 h 79.8964 c 63.5086,0 79.7972,0.2564 79.4126,1.25 -0.2661,0.6875 -41.7143,74.2856 -92.107,163.5514 -50.3927,89.2657 -91.6231,162.6952 -91.6231,163.1766 0,0.4813 42.1092,77.9107 93.5761,172.0651 51.4669,94.1545 93.815,171.8125 94.107,172.5734 0.4494,1.1712 -12.3454,1.3835 -83.3822,1.3835 h -83.9131 l -60.4439,-113.4735 c -33.2441,-62.4104 -60.807,-113.3643 -61.2507,-113.231 -0.4437,0.1333 -28.3567,51.0838 -62.0289,113.2234 l -61.2221,112.9811 -80.3063,0.256 -80.3064,0.2559 z m 375.631,-1042.14926 -187.9313,-206.39323 -0.2524,200.39323 -0.2525,200.3933 h -68.9975 -68.9976 v -342.99999 -343 l 38.25,0.0671 38.25,0.0671 187.5,206.06438 187.5,206.06441 0.2525,-200.13151 0.2524,-200.13148 h 69.4976 69.4975 v 343 342.99999 h -38.3187 -38.3186 z m -1916.631,191.1493 c 1.084,-1.7908 44.1192,-76.4884 95.6338,-165.9948 l 93.6629,-162.73877 -87.1554,-163.76121 c -47.9354,-90.06867 -88.9387,-167.02371 -91.1185,-171.01121 l -3.9632,-7.25 84.3201,0.0348 84.32,0.0348 56.8649,110.96519 c 31.2757,61.03085 57.1507,110.95746 57.5,110.94802 0.3493,-0.009 26.9423,-49.95943 59.0956,-111 l 58.4606,-110.98281 h 79.8964 c 63.5086,0 79.7972,0.25639 79.4126,1.25 -0.2661,0.6875 -41.7143,74.28562 -92.107,163.55137 -50.3927,89.26575 -91.6231,162.69522 -91.6231,163.17659 0,0.48138 42.1092,77.91073 93.5761,172.06523 51.4669,94.1544 93.815,171.8125 94.107,172.5734 0.4494,1.1711 -12.3454,1.3834 -83.3822,1.3834 h -83.9131 l -60.4439,-113.4734 c -33.2441,-62.4104 -60.807,-113.3644 -61.2507,-113.2311 -0.4437,0.1333 -28.3567,51.0839 -62.0289,113.2234 l -61.2221,112.9811 -80.3063,0.256 -80.3064,0.256 z m 738.3643,2.3773 c 0.1845,-0.4835 59.9601,-154.8362 132.8346,-343.00614 l 132.4993,-342.12715 47.0007,0.0223 47.0008,0.0223 132,341.07935 c 72.6,187.59364 132.324,341.93634 132.72,342.98384 0.7047,1.8639 -0.9378,1.8991 -76.9874,1.6484 l -77.7074,-0.2562 -20.5126,-56.5 -20.5126,-56.5 -116.009,-0.2541 -116.009,-0.2542 -20.0766,56.7542 -20.0767,56.7541 -78.2497,0.2561 c -44.6905,0.1463 -78.1059,-0.1208 -77.9144,-0.6228 z m 382.6183,-240.3833 c -10.1249,-29.3615 -69.4347,-195.71294 -69.7829,-195.72624 -0.4952,-0.0189 -71,194.86724 -71,196.25504 0,0.3967 31.7731,0.7212 70.607,0.7212 56.0488,0 70.5181,-0.2577 70.1759,-1.25 z M 5274.7883,582.16037 V 245.07769 l 148.75,0.33116 c 160.8352,0.35806 154.855,0.17215 187.25,5.82104 77.3726,13.49185 150.1169,53.3725 198.3266,108.72866 47.6549,54.71913 74.5646,119.25568 80.7663,193.6991 2.2332,26.80751 0.2461,66.32419 -4.7018,93.49999 -12.1789,66.8913 -46.3652,130.6402 -94.7074,176.6056 -48.4097,46.0297 -111.1458,77.2264 -179.6837,89.3513 -31.1319,5.5075 -25.9171,5.3468 -186.75,5.7523 l -149.25,0.3762 z m 289.5,197.97517 c 101.441,-11.3351 171.5,-92.2106 171.5,-197.97789 0,-89.28322 -50.2153,-162.43341 -129.6495,-188.86452 -12.934,-4.30369 -27.8232,-7.54597 -41.8505,-9.1134 -5.138,-0.57412 -37.858,-1.00919 -76.25,-1.01388 l -67.25,-0.008 v 199 198.99999 l 67.25,-0.01 c 38.392,-0.01 71.112,-0.4397 76.25,-1.0139 z m 578.5,-197.97789 v -337 h 192.5 192.5 v 69 69 H 6408.2807 6288.773 l 0.2577,61.75 0.2576,61.75 86.75,0.25552 86.75,0.25553 v 68.48895 68.48899 l -86.75,0.2555 -86.75,0.2555 -0.2569,68.25 -0.257,68.25 h 122.007 122.0069 v 69 69 h -195 -195 z m 657,-0.0453 V 245.06699 l 119.25,0.37188 c 129.76,0.40466 126.8411,0.28622 154.6564,6.27539 63.595,13.69326 117.2055,49.50354 147.6787,98.64511 22.5163,36.31002 32.5087,75.06408 31.1223,120.70194 -0.5893,19.39571 -2.1176,30.96214 -6.24,47.22495 -13.3239,52.56236 -47.7604,98.54671 -93.6196,125.01358 -4.8663,2.8085 -8.8478,5.2525 -8.8478,5.4311 0,0.1785 35.325,60.8513 78.5,134.8282 43.175,73.977 78.5,134.75 78.5,135.0511 0,0.3011 -38.4106,0.5474 -85.3568,0.5474 h -85.3568 l -65.0804,-117.75 -65.0805,-117.75 -27.0627,-0.2661 -27.0628,-0.266 v 118.016 118.0161 h -73 -73 z m 229.5305,-31.31483 c 25.0625,-4.89764 44.4116,-15.30282 57.604,-30.97723 7.0304,-8.353 11.9503,-17.62361 15.4965,-29.19984 2.5074,-8.18497 2.7501,-10.39466 2.7968,-25.46277 0.059,-18.93472 -1.0302,-24.37478 -7.5322,-37.63069 -11.4262,-23.29506 -37.7815,-39.04602 -72.3956,-43.26635 -4.9609,-0.60485 -24.82,-1.09859 -44.25,-1.10014 l -35.25,-0.003 v 84.33333 c 0,46.38334 0.3375,84.6753 0.75,85.09325 0.4125,0.41796 17.4,0.54001 37.75,0.27124 27.8791,-0.36823 38.9796,-0.87554 45.0305,-2.05798 z M 1534.9357,900.87124 c -94.6272,-157.1887 -125.8702,-209.7382 -125.769,-211.5386 0.067,-1.1894 60.1966,-102.09983 133.6216,-224.2455 l 133.5,-222.08303 129.5,0.61862 c 71.225,0.34024 131.0911,0.86688 133.0357,1.17031 2.7712,0.4324 3.5419,1.01798 3.5642,2.70815 0.044,3.33277 -30.4972,54.51906 -271.5775,455.15645 -118.7328,197.3152 -126.7531,210.5201 -127.8293,210.4636 -0.3812,-0.02 -4.0017,-5.5325 -8.0457,-12.25 z m -765.94481,0.036 c -1.0782,-1.7875 -52.0299,-86.95 -113.2259,-189.25 C 594.56899,609.35725 529.55809,500.68225 511.29629,470.15725 439.81069,350.66737 387.59799,262.461 382.49239,252.56047 c -0.8784,-1.70323 -1.3626,-3.99318 -1.0761,-5.08878 0.5053,-1.932 1.6984,-2.01192 39.6103,-2.65322 21.4991,-0.36367 81.027,-0.66122 132.2843,-0.66122 h 93.195 l 103.3598,172.75 c 154.5468,258.30119 156.9226,262.33399 156.9226,266.37049 0,1.6964 -3.3729,7.2979 -69.7768,115.8795 -61.9807,101.349 -64.2496,105 -65.2524,105 -0.4442,0 -1.6899,-1.4625 -2.7682,-3.25 z m 184.8263,-332.99999 c -11.6571,-18.70712 -136.4106,-226.40742 -171.0328,-284.75 -10.6076,-17.875 -19.4303,-33.6767 -19.606,-35.11489 -0.3008,-2.46136 -0.013,-2.65166 4.8952,-3.2413 2.8681,-0.34454 62.4372,-0.63034 132.3758,-0.63512 l 127.16111,-0.009 2.4844,2.95258 c 5.7767,6.86547 70.6934,114.82215 70.6934,117.56358 0,2.60554 -4.4804,10.12115 -63.1822,105.98415 -52.43751,85.63311 -71.00711,115.5 -71.81151,115.5 -0.3329,0 -5.7227,-8.2125 -11.9774,-18.25 z"
+                        />
+                    </svg>
+                </a>
+                <div class="foot-links">
+                    <a href="#">Official Logo Verification</a>
+                    <a href="#">Text Automation</a>
+                    <a href="#">Interactive Catalogs</a>
+                    <a href="#">Success Stories</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Carrier Network Status</a>
+                    <a href="#"
+                        >Contact a human
+                        <svg class="ext" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 4h6v6" />
+                            <path d="M20 4l-8.5 8.5" />
+                            <path d="M19 13v6H5V5h6" /></svg
+                    ></a>
+                </div>
+                <div class="foot-copy">
+                    <p>
+                        © 2026 Xander Nexus Systems Inc. All rights reserved.
+                        Xander Nexus provides official, carrier-verified mobile
+                        messaging solutions for growing businesses.
+                    </p>
+                    <p>
+                        This is a demonstration layout showing how modern text
+                        messaging upgrades traditional small business
+                        communication.
+                    </p>
+                </div>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Anti-Spam Compliance</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Business Verification Rules</a>
+                    <a href="#">Cookie Settings</a>
+                    <a href="#">Site Map</a>
+                    <a href="#">Your Privacy Choices</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE NOTICE (full-width; shown on every load; nothing stored) -->
+        <div
+            class="cookie"
+            id="cookieNotice"
+            role="dialog"
+            aria-label="Privacy and cookie notice"
+            aria-live="polite"
+        >
+            <div class="ckwrap">
+                <div class="ck-text">
+                    <h4>Cookies: simple and honest</h4>
+                    <p>
+                        We don't use tracking or advertising cookies, and we
+                        never collect, sell, or share your data with third
+                        parties. The only information involved is what your
+                        browser needs to display this page — and because nothing
+                        is stored, you'll see this notice on every visit.
+                        <a href="privacy.html">Privacy statement</a>
+                    </p>
+                </div>
+                <div class="ck-actions">
+                    <button class="ck-btn" id="cookieOk">Got it</button>
+                </div>
+                <button class="ck-x" id="cookieX" aria-label="Dismiss notice">
+                    &times;
+                </button>
+            </div>
+        </div>
+
+        <script>
+            // Sticky header style on scroll
+            const header = document.getElementById("header");
+            const onScroll = () =>
+                header.classList.toggle("scrolled", window.scrollY > 60);
+            onScroll();
+            window.addEventListener("scroll", onScroll, { passive: true });
+
+            // Mobile menu (drill-down)
+            const menu = document.getElementById("mobileMenu");
+            const burger = document.getElementById("menuOpen");
+            const headerLogo = document.getElementById("headerLogo");
+            const headerBack = document.getElementById("headerBack");
+            const showHeaderBack = () => {
+                headerLogo.style.display = "none";
+                headerBack.style.display = "inline-flex";
+            };
+            const showHeaderLogo = () => {
+                headerLogo.style.display = "";
+                headerBack.style.display = "";
+            };
+            const resetMenu = () => {
+                menu.classList.remove("in-sub");
+                menu.querySelectorAll(".mm-sub.active").forEach((s) =>
+                    s.classList.remove("active"),
+                );
+                showHeaderLogo();
+            };
+            const closeMenu = () => {
+                menu.classList.remove("open", "mm-animated");
+                burger.classList.remove("is-open");
+                document.body.style.overflow = "";
+                resetMenu();
+            };
+            const openMenu = () => {
+                resetMenu();
+                menu.classList.add("open");
+                burger.classList.add("is-open");
+                document.body.style.overflow = "hidden";
+            };
+            menu.addEventListener("transitionend", (e) => {
+                if (
+                    e.propertyName === "transform" &&
+                    menu.classList.contains("open")
+                )
+                    menu.classList.add("mm-animated");
+            });
+            burger.onclick = () => {
+                menu.classList.contains("open") ? closeMenu() : openMenu();
+            };
+            document.getElementById("menuClose").onclick = closeMenu;
+            document.getElementById("mmBack").onclick = resetMenu;
+            headerBack.onclick = resetMenu;
+            menu.querySelectorAll(".mm-item[data-sub]").forEach(
+                (btn) =>
+                    (btn.onclick = () => {
+                        const panel = menu.querySelector(
+                            '.mm-sub[data-panel="' + btn.dataset.sub + '"]',
+                        );
+                        if (panel) {
+                            panel.scrollTop = 0;
+                            panel.classList.add("active");
+                            menu.classList.add("in-sub");
+                            showHeaderBack();
+                        }
+                    }),
+            );
+            menu.querySelectorAll("a").forEach((a) => (a.onclick = closeMenu));
+
+            // Mega menu (desktop)
+            const mega = document.getElementById("mega");
+            const triggers = document.querySelectorAll(".nav-trigger");
+            const megaPanels = mega.querySelectorAll(".mega-panel");
+            const setLevel = (panel, sub, direction) => {
+                const oldLevel = panel.querySelector(".mega-level.show");
+                const newLevel = sub
+                    ? panel.querySelector('.mega-level[data-sub="' + sub + '"]')
+                    : panel.querySelector(".mega-root");
+                if (!newLevel || oldLevel === newLevel) return;
+                if (oldLevel && direction) {
+                    oldLevel.classList.remove("show");
+                    oldLevel.classList.add(
+                        "exiting",
+                        direction === "forward" ? "exit-forward" : "exit-back",
+                    );
+                    oldLevel.addEventListener(
+                        "animationend",
+                        () => {
+                            oldLevel.classList.remove(
+                                "exiting",
+                                "exit-forward",
+                                "exit-back",
+                            );
+                        },
+                        { once: true },
+                    );
+                } else if (oldLevel) {
+                    oldLevel.classList.remove("show");
+                }
+                newLevel.classList.remove("enter-forward", "enter-back");
+                newLevel.classList.add("show");
+                if (direction) {
+                    newLevel.classList.add(
+                        direction === "forward"
+                            ? "enter-forward"
+                            : "enter-back",
+                    );
+                }
+            };
+            const openMega = (name) => {
+                megaPanels.forEach((p) => {
+                    const on = p.dataset.menu === name;
+                    p.classList.toggle("show", on);
+                    if (on) setLevel(p, null);
+                });
+                triggers.forEach((t) => {
+                    const on = t.dataset.menu === name;
+                    t.classList.toggle("active", on);
+                    t.setAttribute("aria-expanded", on);
+                });
+                mega.classList.add("open");
+                header.classList.add("mega-open");
+                mega.dataset.current = name;
+            };
+            const showPanel = (name) => {
+                megaPanels.forEach((p) => {
+                    const on = p.dataset.menu === name;
+                    p.classList.toggle("show", on);
+                    if (on) setLevel(p, null);
+                });
+                mega.dataset.current = name;
+            };
+            const closeMega = () => {
+                mega.classList.remove("open");
+                header.classList.remove("mega-open");
+                mega.dataset.current = "";
+                triggers.forEach((t) => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-expanded", "false");
+                });
+            };
+            triggers.forEach((t) => {
+                t.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    mega.classList.contains("open") &&
+                    mega.dataset.current === t.dataset.menu
+                        ? closeMega()
+                        : openMega(t.dataset.menu);
+                });
+                t.addEventListener("mouseenter", () => {
+                    // hover only shows the black bar via CSS — panel stays on the clicked item
+                });
+            });
+            mega.querySelectorAll(".mega-link.has-sub").forEach((b) =>
+                b.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    setLevel(
+                        b.closest(".mega-panel"),
+                        b.dataset.sub,
+                        "forward",
+                    );
+                }),
+            );
+            mega.querySelectorAll(".mega-back").forEach((b) =>
+                b.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    setLevel(b.closest(".mega-panel"), null, "back");
+                }),
+            );
+            mega.querySelectorAll(".mega-link:not(.has-sub)").forEach((a) =>
+                a.addEventListener("click", (e) => {
+                    if (a.getAttribute("href") === "#") e.preventDefault();
+                    closeMega();
+                }),
+            );
+            document
+                .getElementById("megaClose")
+                .addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    closeMega();
+                });
+            document.addEventListener("click", (e) => {
+                if (
+                    mega.classList.contains("open") &&
+                    !header.contains(e.target)
+                )
+                    closeMega();
+            });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") closeMega();
+            });
+
+            // Case study tabs
+            const tabs = document.querySelectorAll(".tab");
+            const panels = document.querySelectorAll(".panel");
+            tabs.forEach((tab) =>
+                tab.addEventListener("click", () => {
+                    tabs.forEach((t) => t.classList.remove("active"));
+                    panels.forEach((p) => p.classList.remove("active"));
+                    tab.classList.add("active");
+                    document
+                        .querySelector(
+                            '.panel[data-panel="' + tab.dataset.tab + '"]',
+                        )
+                        .classList.add("active");
+                }),
+            );
+
+            // Scroll reveal
+            const io = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e, i) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add("in");
+                            io.unobserve(e.target);
+                        }
+                    });
+                },
+                { threshold: 0.15 },
+            );
+            document.querySelectorAll(".reveal").forEach((el, i) => {
+                el.style.transitionDelay = (i % 3) * 0.08 + "s";
+                io.observe(el);
+            });
+
+            // Hero video: hide the "placeholder" tag once a real video loads
+            const heroVid = document.querySelector(".hero-video");
+            if (heroVid)
+                heroVid.addEventListener("loadeddata", () => {
+                    document
+                        .querySelectorAll(".hero-tag")
+                        .forEach((t) => (t.style.display = "none"));
+                });
+
+            // Hero video pause/play control
+            const heroPause = document.getElementById("heroPause");
+            if (heroVid && heroPause) {
+                const syncPause = () =>
+                    heroPause.classList.toggle("paused", heroVid.paused);
+                heroPause.addEventListener("click", () => {
+                    if (heroVid.paused) heroVid.play().catch(() => {});
+                    else heroVid.pause();
+                });
+                heroVid.addEventListener("play", syncPause);
+                heroVid.addEventListener("pause", syncPause);
+                syncPause();
+            }
+
+            // Cookie notice: dismiss for this view only. Nothing is stored,
+            // so it reappears on every page load — and that's the point.
+            const ckNotice = document.getElementById("cookieNotice");
+            const ckHide = () => ckNotice.classList.add("hide");
+            document.getElementById("cookieOk").onclick = ckHide;
+            document.getElementById("cookieX").onclick = ckHide;
+        </script>
+    </body>
+</html>
